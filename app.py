@@ -14,14 +14,23 @@ app = Flask(__name__)
 # def hello():
 #      return 'Hello, World!'
 
-@app.route("/graphql", methods=["POST"])
+
+@app.route("/graphql", methods=["GET"])
 def graphql_playground():
+    """Serve GraphiQL playground"""
+    return PLAYGROUND_HTML, 200
+
+@app.route("/graphql", methods=["POST"])
+def graphql_server():
     data = request.get_json()
 
     success, result = graphql_sync(
         schema,
+
         data,
+        #pass the json into graphql sync along with schema
         context_value=request,
+        # we do this just in case we want to make use of something outside of the query, within a resolver
         debug=app.debug
 
     )
