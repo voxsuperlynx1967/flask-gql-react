@@ -1,0 +1,42 @@
+
+
+type Query {
+    hello: String!
+}
+
+
+enum Size {
+    HALF_PINT
+    PINT
+}
+
+enum BeerType {
+    IPA
+    STOUT
+    PILSNER
+}
+
+type Beer {
+    id: String!
+    size: Size!
+    name: String!
+    type: BeerType!
+}
+
+type Query {
+    orders: [Beer]!
+}
+
+type Mutation {
+    orderBeer(size: Size!, name: String!, type: BeerType!): Beer
+    #User can specify these items
+
+}
+
+#to add a mutatation
+# Add the mutation to the schema
+# Write the resolver
+# Connect the mutation to our schema
+
+
+#new field, orders which will return list of beer orders, we need to create a resolver for this new field
