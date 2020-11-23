@@ -29,8 +29,7 @@ type Query {
 
 type Mutation {
     orderBeer(size: Size!, name: String!, type: BeerType!): Beer
-    #User can specify these items
-
+    #User can specify these items and then get a valid ID
 }
 
 #to add a mutatation

@@ -1,6 +1,7 @@
-from ariadne import QueryType
+from ariadne import QueryType, MutationType
 from uuid import uuid4
 query = QueryType()
+mutation = MutationType()
 
 # @query.field("hello")
 # def resolve_hello(_, info):
@@ -18,3 +19,10 @@ orders = []
 @query.field("orders")
 def resolve_orders(_, info):
     return orders
+
+@mutation.field("orderBeer")
+
+def resolver_order_beer(_, info, size, name, type):
+    newOrder = Beer(size, name, type)
+    orders.append(newOrder)
+    return newOrder
