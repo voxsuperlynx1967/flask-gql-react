@@ -1,35 +1,24 @@
 import React, { useState } from "react"
-export default function OrderForm() {
+import orderBeer from "./Mutations"
+import getOrders from "./Queries"
+export default function OrderForm(myOrders, setMyOrders ) {
 
     const [order, setOrder] = useState({
         size: "HALF_PINT",
         type: "PILSNER",
         name: "",
     })
-
     function handleSubmit(e) {
         e.preventDefault()
 
         orderBeer(order.size, order.name, order.type, ({orderBeer}) => {
             setMyOrders([...myOrders, orderBeer])
         })
-    }
 
+    }
     return (
         <div className="formContainer">
             <form onSubmit={handleSubmit}>
-                <label>
-                    Size:
-                    <select
-                        onChange = {e => setOrder({...order, size: e.target.value})}>
-                        <option>
-
-                        </option>
-                        <option>
-
-                        </option>
-                        </select>
-                </label>
                 <label>
                     Name
                      <input
@@ -37,17 +26,35 @@ export default function OrderForm() {
                         onChange=  {e => setOrder({...order, name: e.target.value})}></input>
                 </label>
                 <label>
-                    Type:
+                    Size
+                    <select
+                        onChange = {e => setOrder({...order, size: e.target.value})}>
+                        <option value="HALF_PINT" defaultValue>
+                            Half Pint
+                        </option>
+                        <option value="PINT" defaultValue>
+                            Pint
+                        </option>
+                        </select>
+                </label>
+                <label>
+                    Type
                     <select
                     onChange={e => setOrder({...order, type: e.target.value})}
                     >
 
-                    <option>
+                    <option value="PILSNER" defaultValue>
+                        Pilsner
                     </option>
-                    <option></option>
+                    <option value="IPA" defaultValue>
+                        IPA
+                    </option>
+                    <option value="STOUT" defaultValue>
+                        Stout
+                    </option>
                 </select>
                 </label>
-                <input type="submit" value="Order Beer" />
+                <input className="submit" type="submit" value="Order Beer" />
             </form>
         </div>
     )

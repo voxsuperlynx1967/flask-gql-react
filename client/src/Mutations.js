@@ -1,4 +1,4 @@
- export default function orderCoffee(size, name, type, cb) {
+export default function orderBeer(size, name, type, cb) {
     fetch(`/graphql`, {
       method: "POST",
       headers: {
@@ -6,7 +6,7 @@
       },
       body: JSON.stringify({
         query: `mutation {
-          orderCoffee(size: ${size}, name: "${name}", type: ${type}) {
+          orderBeer(size: ${size}, name: "${name}", type: ${type}) {
             id
             name
             type
