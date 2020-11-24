@@ -2,7 +2,7 @@
 
 Welcome to the GQL Drink Manager Wiki!
 
-This is a simple single page full-stack application built using GraphQL, Ariadne, React, Flask, Python, Material-UI, and Javascript. This application was completed with help from [this article](https://blog.sethcorker.com/how-to-create-a-react-flask-graphql-project)
+This is a simple single page full-stack application built using GraphQL, Ariadne, React, Flask, Python, Material-UI, and Javascript. This application was completed with help from [this article].(https://blog.sethcorker.com/how-to-create-a-react-flask-graphql-project)
 
 The backend of this application may be started by cloning the repo, entering into the "server" folder, entering the command "pipenv shell", and then entering the command "flask run."
 
