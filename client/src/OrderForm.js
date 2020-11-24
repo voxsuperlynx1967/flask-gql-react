@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import orderBeer from "./Mutations"
-import getOrders from "./Queries"
+const { orderBeer, removeBeer } = require("./Mutations.js")
 export default function OrderForm(myOrders, setMyOrders ) {
 
     const [order, setOrder] = useState({

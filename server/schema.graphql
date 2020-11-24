@@ -25,6 +25,10 @@ type Beer {
     type: BeerType!
 }
 
+type RemoveBeerPayload {
+    removed: Boolean!,
+}
+
 
 type Query {
     orders: [Beer]!
@@ -32,6 +36,7 @@ type Query {
 
 type Mutation {
     orderBeer(size: Size!, name: String!, type: BeerType!): Beer
+    removeBeer(id: ID!): RemoveBeerPayload!
     #User can specify these items and then get a valid ID
 }
 
