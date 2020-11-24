@@ -1,5 +1,5 @@
 .order {
-    background-color: lightblue;
+    background-color: lightgrey;
     border-radius: 5%;
     margin-top: 10%;
     width: 100%;
@@ -9,4 +9,13 @@
 .name {
     background-color: midnightblue;
     border-radius: 5px;
+    font-family: 'Modak', cursive;
+    margin-bottom: 2%;
+}
+
+.info {
+    background-color: #ff53dd;
+    border-radius: 5px;
+    font-family: 'Patua One', cursive;
+    padding: 1%;
 }

@@ -39,17 +39,18 @@
 
 svg.beer {
     fill: white;
-    height: 20%;
-    width: 90%;
-    padding: 1%;
+    height: 150px;
+    width: 150px;
+    padding: 10%;
 }
 
 .submit {
     background-color: #FFD700;
     border: none;
-    color: midnightblue;
+    color: black;
     font-size: 18px;
     margin-top: 10%;
+    font-family: 'Modak';
 }
 
 .formgroup {

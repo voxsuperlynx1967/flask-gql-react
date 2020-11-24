@@ -8,20 +8,23 @@
 enum Size {
     HALF_PINT
     PINT
+    PITCHER
 }
 
 enum BeerType {
     IPA
     STOUT
     PILSNER
+    PORTER
 }
 
 type Beer {
-    id: String!
+    id: ID!
     size: Size!
     name: String!
     type: BeerType!
 }
+
 
 type Query {
     orders: [Beer]!

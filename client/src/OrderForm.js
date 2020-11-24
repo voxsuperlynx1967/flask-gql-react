@@ -35,6 +35,9 @@ export default function OrderForm(myOrders, setMyOrders ) {
                         <option value="PINT" defaultValue>
                             Pint
                         </option>
+                        <option value="PITCHER" defaultValue>
+                            Pitcher
+                        </option>
                         </select>
                 </label>
                 <label>
@@ -51,6 +54,9 @@ export default function OrderForm(myOrders, setMyOrders ) {
                     </option>
                     <option value="STOUT" defaultValue>
                         Stout
+                    </option>
+                    <option value="PORTER" defaultValue>
+                        Porter
                     </option>
                 </select>
                 </label>

@@ -7,7 +7,7 @@ export default function Order(order) {
              {order.name}
             </div>
             <div className="info">
-            {order.size.toLowerCase()}{" "} of {order.type.split("_").join(" ").toLowerCase()}
+            {order.size[0] + order.size.substring(1).split("_").join(" ").toLowerCase()} of {order.type[0] + order.type.substring(1).split("_").join("").toLowerCase()}
             </div>
         </div>
     )
