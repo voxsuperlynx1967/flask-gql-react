@@ -21,7 +21,6 @@ def resolve_orders(_, info):
     return orders
 
 @mutation.field("orderBeer")
-
 def resolver_order_beer(_, info, size, name, type):
     newOrder = Beer(size, name, type)
     orders.append(newOrder)
