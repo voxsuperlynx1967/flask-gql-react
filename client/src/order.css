@@ -1,0 +1,12 @@
+.order {
+    background-color: lightblue;
+    border-radius: 5%;
+    margin-top: 10%;
+    width: 100%;
+    padding: 10%;
+}
+
+.name {
+    background-color: midnightblue;
+    border-radius: 5px;
+}
