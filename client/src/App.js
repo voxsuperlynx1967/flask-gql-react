@@ -29,7 +29,7 @@ function App() {
         <div className="App">
 
         <header className="App-header">
-            <div>GQL Drink Manager</div>
+            <div className="beerhead">GraphQL Drink Manager</div>
             <div className="content">
                 <div className="formgroup">
                     <svg className="beer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" space="preserve">

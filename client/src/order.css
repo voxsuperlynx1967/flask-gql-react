@@ -19,3 +19,14 @@
     font-family: 'Patua One', cursive;
     padding: 1%;
 }
+
+svg.delete {
+    fill: red;
+    cursor: pointer;
+}
+
+.delete {
+    display:flex;
+    justify-content: flex-start;
+    margin-bottom: 5%;
+}

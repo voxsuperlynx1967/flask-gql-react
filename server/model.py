@@ -13,6 +13,11 @@ class Beer:
         self.name = name
         self.type = beer_type
         self.id = uuid4()
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name
+        }
 
 orders = []
 
@@ -24,4 +29,21 @@ def resolve_orders(_, info):
 def resolver_order_beer(_, info, size, name, type):
     newOrder = Beer(size, name, type)
     orders.append(newOrder)
+    print(newOrder.id)
     return newOrder
+
+@mutation.field("removeBeer")
+def resolver_remove_beer(_, info, id):
+    removed = False
+    def find(arr, id):
+        for x in arr:
+            if str(x.id) == str(id):
+                return x
+    d = find(orders, id)
+    orders.remove(d)
+    if d not in orders:
+        removed = True
+
+    return {
+        "removed": removed
+    }

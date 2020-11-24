@@ -1,8 +1,16 @@
 import React, { useState } from "react"
 import './order.css'
+import CancelIcon from '@material-ui/icons/Cancel';
+const { orderBeer, removeBeer } = require("./Mutations.js")
 export default function Order(order) {
+    const handleDelete = () => {
+        removeBeer(String(order.id))
+    }
     return (
         <div className="order" id={order.id}>
+            <div className="delete">
+                <CancelIcon className="delete" onClick={handleDelete}>Remove Order</CancelIcon>
+            </div>
             <div className="name">
              {order.name}
             </div>

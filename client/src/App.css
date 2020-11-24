@@ -80,3 +80,7 @@ select {
     flex-direction: row;
     justify-content: space-around
 }
+
+.beerhead {
+    font-family: 'Modak', cursive;
+}
