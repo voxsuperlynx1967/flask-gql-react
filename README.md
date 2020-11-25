@@ -16,7 +16,7 @@ This application supports a single GQL query and two mutations. By selecting "Or
 
 The application then queries all orders.
 
-By selecting the "X" icon, you are running the "removeBeer mutation and deleting a "Beer" object from the orders list.
+By selecting the "X" icon, you are running the "removeBeer" mutation and deleting a "Beer" object from the orders list.
 
 <img src="https://wegroovybaby.s3.amazonaws.com/Screen+Shot+2020-11-24+at+10.21.08+AM.png">
 
